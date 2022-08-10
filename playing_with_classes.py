@@ -78,7 +78,7 @@
 #         self.last_name = last_name
 #         self.address = address
 #         self.phone_no = phone_no
-        
+
 #     def greet_user(self):
 #         """Greet the user"""
 #         print(f"Hello {self.first_name+self.last_name}")
@@ -101,7 +101,7 @@
 # user2.greet_user()
 # user2.describe_user()
 
-# user3.greet_user() 
+# user3.greet_user()
 # user3.describe_user()
 
 # # 🍟🍟🍟🍟 Changing Attribute value challenge of Class 🍟🍟🍟🍟
@@ -134,7 +134,7 @@ that could represent how many customers were served in, say, a day of business.
 #         print(f'{self.restaurant_name} is the name of restaurant')
 #         print(f'{self.cuisine_type} is the name of cuisine')
 #         print('=================================')
-    
+
 #     def set_number_served(self,customer_increase):
 #         self.number_served +=customer_increase
 
@@ -142,14 +142,13 @@ that could represent how many customers were served in, say, a day of business.
 #             print(f'You have served {self.number_served} no of customers')
 
 
-        
 # 🚕🚕🚕🚕 Task one completed as shown below
 # restaurant = Restaurant(restaurant_name='Habibi restaurant',cuisine_type='Lebanese Cuisine')
 # restaurant.increment_number_served()
 # restaurant.set_number_served(4)
 # restaurant.increment_number_served()
 
-'''
+"""
 9-5. Login Attempts: Add an attribute called login_attempts to your User class from
 Exercise 9-3 (page 162). Write a method called increment_login_attempts() that
 increments the value of login_attempts by 1. Write another method called
@@ -158,26 +157,121 @@ Make an instance of the User class and call increment_login_attempts() several
 times. Print the value of login_attempts to make sure it was incremented properly, and
 then call reset_login_attempts(). Print login_attempts again to make sure it was
 reset to 0.
-'''
+"""
 
-class User:
-    def __init__(self):
-        self.login_attempts = 0
+# class User:
+#     def __init__(self):
+#         self.login_attempts = 0
 
-    def increment_login_attempts(self):
-        self.login_attempts +=1
-        print('Login attempts: ',self.login_attempts)
-       
-
-    def reset_login_attempts(self):
-        self.login_attempts = 0   
-        print('Login attempts has been set to Zero: ',self.login_attempts) 
+#     def increment_login_attempts(self):
+#         self.login_attempts +=1
+#         print('Login attempts: ',self.login_attempts)
 
 
-user1 = User()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-user1.reset_login_attempts()
+#     def reset_login_attempts(self):
+#         self.login_attempts = 0
+#         print('Login attempts has been set to Zero: ',self.login_attempts)
 
 
+# user1 = User()
+# user1.increment_login_attempts()
+# user1.increment_login_attempts()
+# user1.reset_login_attempts()
 
+
+# 🍁🍁🍁🍁 Write a class Calculator capable of finding square, cube and squareroot of a number 🍁🍁🍁🍁
+
+# class Calculator:
+#     a = ''
+#     def __init__(self, number):
+#         self.num = number
+
+
+#     def square(self):
+#         print(self.num*2)
+
+#     def cube(self):
+#         print(self.num*3)
+
+# cal = Calculator(number=4)
+# cal.square()
+# cal.cube()
+# cal.a = 9124
+# print(cal.a)
+
+# cal_new = Calculator(number=4)
+# if cal_new.a =='':
+#     print('a is empty')
+# else:
+#     print('a is not empty')
+
+# 🍁🍁🍁🍁 Operater overloading with python built-in methods 🍁🍁🍁🍁
+
+# class Number:
+#     def __init__(self, num):
+#         self.num = num
+
+#     def __str__(self):
+#         return f'Decimal number: {self.num}'
+
+
+# n1 = Number(4)
+# print(n1)
+
+
+# class Animals:
+#     def __init__(self):
+#         self.legs = 4
+
+#     def info(self):
+#         return f"All animals have {self.legs} legs."
+
+# class Pets(Animals):
+
+#     def __init__(self):
+#         super().__init__()
+#         self.wafadar = True
+
+# class Dog(Pets):
+
+#     def __init__(self):
+#         super().__init__()
+#         self.height = 5
+
+#     def info(self):
+#         print(f"All animals have {self.legs} legs & height of Dog is {self.height}")
+
+#     # Below is a static method and making it with the help of decorator will make it accessible without 🌅"self" keyword
+#     @staticmethod
+#     def bark():
+#         print('Dog is barking and owling at night')
+
+
+# dog = Dog()
+# dog.info()
+# dog.bark()
+
+
+# 🌎🌎🌎🌎 Create a class Employee and increment it's salary by using getter and setter decorators  🌎🌎🌎🌎
+
+# class Employee:
+#     salary = 1000
+#     increment = 1.5
+
+#     # It's a getter method which is normally define by putting @property to it.
+#     @property
+#     def salaryAfterIncrement(self):
+#         return self.salary * self.increment
+
+#     @salaryAfterIncrement.setter
+#     def salaryAfterIncrement(self, sai):
+#         self.increment = sai/self.salary
+
+
+# emp = Employee()
+# print("Total: ",emp.salaryAfterIncrement)
+# print("Before increment: ", emp.increment,'\n')
+
+# emp.salaryAfterIncrement = 2000
+# print("After increment: ", emp.increment)
+# print("Total: ",emp.salaryAfterIncrement)
