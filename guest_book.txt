@@ -1,0 +1,16 @@
+Your name is : asad
+Your designation is : london
+
+==============================
+Your name is : saudi
+Your designation is : saudi
+
+==============================
+Your name is : bilal
+Your designation is : kabul
+
+==============================
+Your name is : hanif
+Your designation is : turkey
+
+==============================
